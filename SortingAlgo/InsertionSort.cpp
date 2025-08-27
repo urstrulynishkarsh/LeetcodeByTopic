@@ -5,26 +5,45 @@
 #include<unordered_map>
 using namespace std;
 
+
+// void insertionSort(vector<int> &nums)
+// {
+//    for(int i=1;i<nums.size();i++)
+//    {
+//         int value=nums[i];
+//         int j=i-1;
+//         for(;j>=0;j--)
+//         {
+//             if(nums[j]>value)
+//             {
+//                 nums[j+1]=nums[j];
+//             }
+//             else{
+//                 break;
+//             }
+//         }
+//         nums[j+1]=value;
+//    }
+    
+// }
+
+
+
 void insertionSort(vector<int> &nums)
 {
-   for(int i=1;i<nums.size();i++)
-   {
-        int value=nums[i];
-        int j=i-1;
-        for(;j>=0;j--)
+    int n=nums.size();
+    for(int i=0;i<n-1;i++)
+    {
+        int j=i;
+        while(j>0 && nums[j-1]>nums[j])
         {
-            if(nums[j]>value)
-            {
-                nums[j+1]=nums[j];
-            }
-            else{
-                break;
-            }
+            swap(nums[j-1],nums[j]);
+            j--;
         }
-        nums[j+1]=value;
-   }
-    
+    }
 }
+
+
 int main()
 {
     int n;
