@@ -32,7 +32,7 @@ using namespace std;
 void insertionSort(vector<int> &nums)
 {
     int n=nums.size();
-    for(int i=0;i<n-1;i++)
+    for(int i=0;i<n;i++)
     {
         int j=i;
         while(j>0 && nums[j-1]>nums[j])
