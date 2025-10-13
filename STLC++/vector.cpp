@@ -29,6 +29,9 @@ int main()
     marks.push_back(10);
     marks.push_back(20);
     marks.push_back(30);
+    // marks.push_front(5);
+
+    cout<<"marks at index 1 is: "<<marks.at(1)<<endl; //20
 
     // marks.clear();
    
@@ -43,6 +46,11 @@ int main()
     cout<<"front element is: "<<marks.front()<<endl; //10
     cout<<"end element is: "<<marks.back()<<endl;  //40
     marks.insert(marks.begin(),100);
+    marks.insert(marks.begin()+3,200);
+    for(int i:marks)
+    {
+        cout<<i<<" ";
+    }
     cout<<marks.front()<<endl;
 
     if(marks.empty()==true)
@@ -52,6 +60,51 @@ int main()
     else{
         cout<<"marks is not empty"<<endl;
     }
+
+
+
+
+    vector<int> first;
+    vector<int> second;
+    first.push_back(10);
+    first.push_back(20);
+    first.push_back(30);
+    cout<<"size of first vector is: "<<first.size()<<endl;
+    first.erase(first.begin(),first.begin()+2);
+
+    cout<<"first vector is: ";
+    for(int i:first)
+    {
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    cout<<"size of first vector is: "<<first.size()<<endl;
+
+    second.push_back(100);
+    second.push_back(200);
+    second.push_back(300);
+
+    first.swap(second);
+
+    cout<<"first vector is: ";
+    for(int i:first)
+    {
+        cout<<i<<" ";
+    }
+
+    cout<<endl;
+    cout<<"second vector is: ";
+    for(int i:second)
+    {
+        cout<<i<<" ";
+    }
+
+
+    cout<<endl;
+    // now we are working with iterator
+
+    vector<int>::iterator it=marks.begin();
+    cout<<"value is: "<<*it<<endl; //100
 
    
 
